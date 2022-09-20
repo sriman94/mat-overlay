@@ -1,0 +1,41 @@
+
+.overlay {
+  //@include border-radius(3px);
+  // margin-top: 2em;
+  color: white;
+ 
+  align-content: center;
+  align-items: center;
+  // padding: 1em;
+  // width: 100%;
+  background-color: #5a7793;
+  &.info {
+    background-color: #5a7793;
+  }
+
+  &.success {
+    background-color: #47b280;
+  }
+
+  &.error {
+    background-color: #ff5a5a;
+  }
+ 
+}
+.message{
+  text-align: center;
+}
+.mat-card {
+  padding: 0;
+  border-radius: 0.4em;
+  width: 100vw-30;
+  height: 3em;
+  display: grid;
+}
+.example-margin {
+  width: 100%;
+}
+
+mat-progress-bar{
+  color:white;
+}

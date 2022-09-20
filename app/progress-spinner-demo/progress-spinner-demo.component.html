@@ -1,0 +1,28 @@
+<section class="example-section">
+  <button mat-raised-button color="primary" (click)="showProgressSpinner()">
+    Success
+  </button>
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="showSpinnerWithoutBackdrop()"
+  >
+   Failure
+  </button>
+</section>
+
+<app-progress-spinner
+  class="example-margin"
+  [backdropEnabled]="true"
+  [positionGloballyCenter]="true"
+  [overlayProgressStatus]="overlayProgressStatus"
+  [overlayMessage]="overlayMessage"
+>
+</app-progress-spinner>
+<app-progress-spinner
+  class="example-margin"
+  [backdropEnabled]="false"
+  [overlayProgressStatus]="overlayProgressStatus1"
+  [overlayMessage]="overlayMessage"
+>
+</app-progress-spinner>

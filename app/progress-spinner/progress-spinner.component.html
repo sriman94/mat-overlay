@@ -1,0 +1,24 @@
+<ng-template #progressSpinnerRef>
+  <mat-card
+    class="overlay"
+    [ngClass]="{
+      info: overlayProgressStatus === 0,
+      success: overlayProgressStatus === 1,
+      error: overlayProgressStatus === 2
+    }"
+  >
+    <mat-card-content>
+      <!-- <mat-progress-bar
+        class="example-margin"
+        color="white"
+        mode="buffer"
+        value="0"
+        bufferValue="0"
+        *ngIf="overlayProgressStatus == 0"
+      >
+      </mat-progress-bar> -->
+			<mat-progress-bar mode="buffer"   *ngIf="overlayProgressStatus == 0"></mat-progress-bar>
+      <p class="message">{{ overlayMessage }}</p>
+    </mat-card-content>
+  </mat-card>
+</ng-template>
