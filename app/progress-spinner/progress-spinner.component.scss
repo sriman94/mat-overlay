@@ -1,41 +1,47 @@
+.overlayparent {
+  display: table-row;
+}
 
 .overlay {
   //@include border-radius(3px);
   // margin-top: 2em;
-  color: white;
- 
-  align-content: center;
-  align-items: center;
-  // padding: 1em;
-  // width: 100%;
-  background-color: #5a7793;
+  color: #5a7793;
+  display: flex;
+  padding: 1em;
+  border-radius: 0.4em;
+  min-height: 1em;
+  width: 100vw-30;
+  text-align: center;
+  margin-left: 20vw;
   &.info {
-    background-color: #5a7793;
+    background-color: transparent;
+    box-shadow: none;
+    font-weight: bold;
   }
 
   &.success {
+    color: white;
     background-color: #47b280;
+    margin-left: 0;
   }
 
   &.error {
+    color: white;
     background-color: #ff5a5a;
+    margin-left: 0;
   }
- 
-}
-.message{
-  text-align: center;
-}
-.mat-card {
-  padding: 0;
-  border-radius: 0.4em;
-  width: 100vw-30;
-  height: 3em;
-  display: grid;
-}
-.example-margin {
-  width: 100%;
 }
 
-mat-progress-bar{
-  color:white;
+.mat-card-content {
+  justify-content: center;
+  margin-left: 25vw;
+}
+.fdp-spinner {
+  text-align: center;
+  justify-content: center;
+  margin-left: 45vw;
+}
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+  color: red;
+  background-color: green;
 }

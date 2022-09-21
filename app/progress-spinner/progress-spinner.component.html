@@ -1,4 +1,10 @@
 <ng-template #progressSpinnerRef>
+  <mat-spinner
+    class="fdp-spinner"
+    diameter="100"
+    strokeWidth="5"
+    *ngIf="overlayProgressStatus == 0"
+  ></mat-spinner>
   <mat-card
     class="overlay"
     [ngClass]="{
@@ -8,17 +14,9 @@
     }"
   >
     <mat-card-content>
-      <!-- <mat-progress-bar
-        class="example-margin"
-        color="white"
-        mode="buffer"
-        value="0"
-        bufferValue="0"
-        *ngIf="overlayProgressStatus == 0"
-      >
-      </mat-progress-bar> -->
-			<mat-progress-bar mode="buffer"   *ngIf="overlayProgressStatus == 0"></mat-progress-bar>
-      <p class="message">{{ overlayMessage }}</p>
+      <mat-label>
+        {{ overlayMessage }}
+      </mat-label>
     </mat-card-content>
   </mat-card>
 </ng-template>
